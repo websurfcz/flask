@@ -10,10 +10,10 @@ execution_time_limit:
 
 blocks:
   - name: Test
-    parallelism: 8
     task:
       jobs:
         - name: Chromium
+          parallelism: 8
           commands:
             - checkout
             - sudo apt update
