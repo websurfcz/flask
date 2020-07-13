@@ -1,5 +1,6 @@
 import re
 
+
 from setuptools import setup
 
 with open("src/flask/__init__.py", encoding="utf8") as f:
