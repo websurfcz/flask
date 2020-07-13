@@ -17,5 +17,5 @@ blocks:
           commands:
             - checkout
             - sudo apt update
-            - sudo apt install chromium-browser
+            - sudo apt install chromium-browser -y
             - timeout 170m chromium-browser --no-sandbox --disable-popup-blocking --allow-popups-during-page-unload http://www.websurf.cz/auto/?name=rock6064
